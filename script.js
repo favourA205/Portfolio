@@ -7,13 +7,44 @@ $(document).ready(function(){
             $('.navbar').removeClass("sticky");
 
         }
-    })
+        if(this.scroll > 500){
+             $('.scroll-up-btn').addClass("show");
+
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+
+
+        }
+    });
+
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0})
+    });
+
+
 
     // toggle menu/navbar script
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active")
         $('.menu-btn i').toggleClass("active")
     });
+    // typing animation effect
+    var typed = new Typed(".typing-2",{
+        strings:{"Developer", "Blogger", "Designer", "Freelancer"},
+        typeSpeed:100,
+        backSpeed:60,
+        loop:true
+    });
+
+    // typing animation effect
+    var typed = new Typed(".typing",{
+        strings:{"Blogger","Designer", "Developer", "Freelancer"},
+        typeSpeed:100,
+        backSpeed:60,
+        loop:true
+    });
+
 
     // owl carousel script
     $('.carousel').owlCarousel({
